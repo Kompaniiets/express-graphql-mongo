@@ -1,4 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
+const { AUTHOR } = require('../common/model-name.constants');
 
 const authorSchema = new Schema({
   name: {
@@ -14,6 +15,6 @@ const authorSchema = new Schema({
   posts: [{ type: Types.ObjectId, ref: 'Post' }]
 });
 
-const Author = model('Author', authorSchema);
+const Author = model(AUTHOR, authorSchema);
 
 module.exports = Author;

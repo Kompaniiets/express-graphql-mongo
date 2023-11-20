@@ -1,4 +1,4 @@
-const PostModel = require('../models/post.model.js');
+const { PostModel } = require('../models');
 
 exports.getPostById = async(id) => {
   return PostModel

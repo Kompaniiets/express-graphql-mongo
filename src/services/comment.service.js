@@ -1,5 +1,4 @@
-const CommentModel = require('../models/comment.model');
-const PostModel = require('../models/post.model');
+const { CommentModel, PostModel } = require('../models');
 
 exports.getCommentById = async(id) => {
   return CommentModel.findById(id);

@@ -1,4 +1,4 @@
-const AuthorModel = require('../models/author.model.js');
+const { AuthorModel } = require('../models');
 
 exports.getAuthorById = async(id) => {
   return AuthorModel.findById(id);

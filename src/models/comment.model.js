@@ -1,4 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
+const { COMMENT } = require('../common/model-name.constants');
 
 const commentSchema = new Schema({
   text: {
@@ -13,6 +14,6 @@ const commentSchema = new Schema({
   post: { type: Types.ObjectId, ref: 'Post' }
 });
 
-const Comment = model('Comment', commentSchema);
+const Comment = model(COMMENT, commentSchema);
 
 module.exports = Comment;

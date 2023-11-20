@@ -12,6 +12,9 @@ const router = require('./routes');
 const typeDefs = require('./graphql/schema');
 const resolvers = require('./graphql/resolvers');
 
+// Init database models
+require('./models');
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
